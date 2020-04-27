@@ -1,7 +1,7 @@
 ﻿# MyERP
 
 
-#### Docker était sous windows. L'adresse Ip par défaut est 192.168.99.100 sous windows.
+#### Docker était sous windows. L'adresse Ip par défaut est 127.0.0.1 sous windows.
 
 Il y a deux profils de tests:
 - test-business qui test l'application en mode développement en local.
