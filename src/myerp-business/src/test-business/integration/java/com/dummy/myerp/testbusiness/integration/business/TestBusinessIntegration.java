@@ -46,13 +46,9 @@ public class TestBusinessIntegration extends BusinessTestCase {
 	private EcritureComptable ecritureComptable;
 	private DaoProxy daoProxy;
 
-	@BeforeClass
-	public static void beforeClassInitialisation() {
-		SpringRegistry.init();
-		AbstractBusinessManager.configure(SpringRegistry.getBusinessProxy(),
-				(DaoProxy) SpringRegistry.getBean("DaoProxy"), SpringRegistry.getTransactionManager());
-
-	}
+    public TestBusinessIntegration() {
+        super();
+    }
 
 	@Test
 	public void getListCompteComptable() throws FunctionalException {
