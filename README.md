@@ -3,9 +3,8 @@
 
 #### Docker était sous windows. L'adresse Ip par défaut est 127.0.0.1 sous windows.
 
-Il y a deux profils de tests:
-- test-business qui test l'application en mode développement en local.
-- test-business-integration qui test l'application sur gitlab-ci (tests d'intégrations.)
+Le profil test est :
+- test-business
 
 
 ## Organisation du répertoire
