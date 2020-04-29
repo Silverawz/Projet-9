@@ -3,9 +3,8 @@
 
 #### Docker était sous windows. L'adresse Ip par défaut est 127.0.0.1 sous windows.
 
-Les profils de test sont :
+Le profil de test est :
 - test-business
-- test-business-integration
 
 ## Organisation du répertoire
 
