@@ -5,6 +5,19 @@
                            http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
 
 
+    <bean id="dataSourceMYERP"
+          class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="org.postgresql.Driver" />    
+        <property name="url" value="jdbc:postgresql://127.0.0.1:9032/db_myerp"/>
+       
+       <!--   <property name="url" value="jdbc:postgresql://192.168.99.100:5432/db_myerp"/>  -->
+       
+       
+		<!--<property name="url" value="jdbc:postgresql://postgres/db_myerp"/>-->
+    
+		<property name="username" value="usr_myerp" />
+		<property name="password" value="myerp" />
+	</bean>
 
     <!-- Consumer Conf -->
 
@@ -13,6 +26,7 @@
     <!-- ====================   Business-Proxy   ==================== -->
 
     <import resource="classpath:com/dummy/myerp/business/applicationContext.xml"/>
+    
     <!-- ========== Transaction Managers ========== -->
     <import resource="classpath*:com/dummy/myerp/business/transactionContext.xml"/>
 </beans>
