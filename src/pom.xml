@@ -401,6 +401,43 @@
                     <artifactId>build-helper-maven-plugin</artifactId>
                     <version>1.10</version>
                 </plugin>
+                
+                <!-- jacoco code coverage -->
+                <plugin>
+                    <groupId>org.jacoco</groupId>
+                    <artifactId>jacoco-maven-plugin</artifactId>
+                    <version>0.8.3</version>
+                    <executions>
+                    	<execution>
+                   	 		<goals>
+                   		 		<goal>prepare-agent</goal>
+                    		</goals>
+                    	</execution>
+                    
+                    	<execution>
+                    		<id>jacoco-report</id>
+                    		<phase>test</phase>
+                   	 		<goals>
+                   		 		<goal>report</goal>
+                    		</goals>
+                    		<!-- default target/jscoco/site/* -->
+                    		<configuration>
+                    			<outputDirectory>target/jacoco-report</outputDirectory>
+                    			<dataFiles>${project.build.directory}/coverage-reports/jacoco.exec</dataFiles>
+                    			<!--  
+                    			<rules>
+                    				<rule>
+                    					<element>CLASS</element>
+                    					<excludes>
+                    						<exclude>com.asimio.demo.Application</exclude>				
+                    					</excludes>           				
+                    				</rule>
+                    			</rules>  --> 		
+                    		</configuration>
+                    	</execution>                    
+                    </executions>
+                </plugin>            
+             
             </plugins>
         </pluginManagement>
     </build>
